@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>이름</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="member : ${members}">  <!-- Java의 Foreach 문법과 같다.-->
+                <td th:text="${member.id}"></td>
+                <td th:text="${member.name}"></td>  <!-- private로 변수가 지정되어 있어 바로 변수에 접근하는게 아니라 GetName과 GetId에서 값을 가져온 것이다.-->
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>
