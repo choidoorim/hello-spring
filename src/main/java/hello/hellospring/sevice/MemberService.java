@@ -5,12 +5,14 @@ import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 //Ctrl + Shift + T 커맨드로 Test를 만들수 있다.
 //@Service
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;
